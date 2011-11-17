@@ -2,9 +2,9 @@
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>TicketsOn project by ExtEdu team</display-name>
   
-  <context-param>
+ <!--  <context-param>
 		<param-name>contextConfigLocation</param-name>
     	<param-value>WEB-INF/applicationContext.xml</param-value>
   	</context-param>
@@ -12,7 +12,7 @@
   	<listener>
     	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   	</listener>  
-  
+   -->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>

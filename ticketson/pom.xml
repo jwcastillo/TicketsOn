@@ -12,9 +12,7 @@
   <name>TicketsOn by ExtEdu team</name>
   <url>www.noname.org</url>
   
-  <description>
-    Some description text
-  </description>
+  <description>Small project for organize your own tasks.</description>
   
    <repositories>
     <repository>
