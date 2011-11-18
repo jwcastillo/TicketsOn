@@ -4,15 +4,15 @@
 <web-app>
   <display-name>TicketsOn project by ExtEdu team</display-name>
   
- <!--  <context-param>
+    <context-param>
 		<param-name>contextConfigLocation</param-name>
     	<param-value>WEB-INF/applicationContext.xml</param-value>
   	</context-param>
 
   	<listener>
     	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  	</listener>  
-   -->
+  	</listener>
+  	
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
