@@ -86,7 +86,7 @@
     		<configuration>
     			<server>tomcat</server>
     			<path>/ticketson</path>
-    			<url>http://localhost:8080/manager/html</url>
+    			<url>http://localhost:8080/manager/text</url>
     		</configuration>
     	</plugin>
     </plugins>
