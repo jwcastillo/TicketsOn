@@ -1,3 +1,4 @@
+<%@page import="org.springframework.web.context.WebApplicationContext, org.ticketson.model.entity.User"%>
 <html>
 <head>
 <title>TicketsOn by ExtEdu team</title>
@@ -13,8 +14,6 @@ Coming soon...
 <div align="center" style="background:rgba(249,247,237,0.4) ; width: 99.9%;height=1px;border: solid 1px #356AA0; position: absolute; bottom:0;">
 &#169;<strong>ExtEdu Team</strong> 2011
 </div>
-
-
 </body>
 </html>
 

@@ -12,17 +12,17 @@
     	<property name="url" value="${jdbc.url}"/>
     	<property name="username" value="${jdbc.username}"/>
     	<property name="password" value="${jdbc.password}"/>
-  	</bean>        
+  	</bean>
   
-  <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+  <bean id="sessionFactoryMY" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
     <property name="dataSource" ref="dataSource"/>
-    <!-- 
+     
     <property name="mappingResources">
       <list>
-        <value></value>
+        <value>org/ticketson/model/entity/User.hbm.xml</value>
       </list>
     </property>
-    -->
+    
     <property name="hibernateProperties">
       <props>
         <prop key="hibernate.query.factory_class">org.hibernate.hql.ast.ASTQueryTranslatorFactory</prop>
@@ -41,6 +41,10 @@
   
   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
     <property name="location" value="/WEB-INF/datasource.properties"/>
-  </bean>  
+  </bean>
+  
+  <bean name="userDao" class="org.ticketson.model.dao.hibernate.UserDaoHibernate">
+  	<property name="sessionFactory" ref="sessionFactoryMY" />
+  </bean>
   
 </beans>
