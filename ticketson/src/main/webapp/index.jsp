@@ -1,9 +1,9 @@
-<%@page import="org.springframework.web.context.WebApplicationContext, org.ticketson.model.entity.User"%>
 <html>
 <head>
 <title>TicketsOn by ExtEdu team</title>
 </head>
 <body bgcolor="#C3D9FF" style="padding: 0; margin: 0; border: 0;">
+<a href="./homePage.do">hw</a>
 <br/><br/><br/><br/><br/><br/>
 <div align="center">
 <h1> Hi all!</h2>

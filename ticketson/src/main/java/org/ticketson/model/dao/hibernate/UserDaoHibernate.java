@@ -9,4 +9,8 @@ public class UserDaoHibernate extends HibernateDaoSupport implements UserDao {
 	public User getUserByID(final long id) {
 		return (User)getHibernateTemplate().get(User.class, id);
 	}
+	
+	public void saveUser(final User user) {
+		getHibernateTemplate().saveOrUpdate(user);
+	}
 }
