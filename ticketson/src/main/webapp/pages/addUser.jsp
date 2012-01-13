@@ -13,7 +13,7 @@
 	<html:form action="/addUser.do">
 		<table>
 			<tr>
-				<td><bean:message key="form.create.user.label.name" />: </td>
+				<td><bean:message key="form.create.user.label.login" />: </td>
 				<td>
 					<html:text property="login" maxlength="50"/>
 					<span style="color: red;"><html:errors property="login" /></span>
