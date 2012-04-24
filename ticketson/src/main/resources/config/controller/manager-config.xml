@@ -9,5 +9,9 @@
 	<bean name="userManager" class="org.ticketson.controller.UserManagerImpl">
 		<property name="userDao" ref="userDao" />
 	</bean>
+	
+	<bean name="newsManager" class="org.ticketson.controller.NewsManagerImpl">
+		<property name="newsDao" ref="newsDao"/>
+	</bean>
   
 </beans>

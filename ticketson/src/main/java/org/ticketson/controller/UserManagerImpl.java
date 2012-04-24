@@ -31,4 +31,11 @@ public class UserManagerImpl implements UserManager {
 		
 		userDao.saveUser(user);
 	}
+	
+	public User getUserByLogin(String login)
+	{
+		User user = null;
+		user = userDao.getUserByLogin(login);
+		return user;
+	}
 }

@@ -9,5 +9,20 @@
 	<bean name="/addUser" class="org.ticketson.view.action.UserAction">
     	<property name="userManager" ref="userManager" />
     </bean>
+    <bean name="/login" class="org.ticketson.view.action.UserAction">
+    	<property name="userManager" ref="userManager" />
+    </bean>
+    
+    <bean name="/logout" class="org.ticketson.view.action.UserAction">
+    	<property name="userManager" ref="userManager" />
+    </bean>
+    
+     <bean name="/addNews" class="org.ticketson.view.action.NewsAction">
+    	<property name="newsManager" ref="newsManager" />
+    </bean>
+    
+     <bean name="/showNews" class="org.ticketson.view.action.NewsAction">
+    	<property name="newsManager" ref="newsManager" />
+    </bean>
   
 </beans>

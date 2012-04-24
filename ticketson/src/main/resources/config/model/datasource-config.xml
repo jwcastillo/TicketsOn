@@ -19,6 +19,7 @@
     <property name="mappingResources">
       <list>
         <value>org/ticketson/model/entity/User.hbm.xml</value>
+        <value>org/ticketson/model/entity/News.hbm.xml</value>
       </list>
     </property>
     

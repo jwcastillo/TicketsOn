@@ -6,9 +6,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>TicketsOn by ExtEdu team</title>
 </head>
-<body>
+<body bgcolor="#C3D9FF" style="padding: 0; margin: 0; border: 0;">
+<jsp:include page="/pages/menu.jsp"/>
 	<h1>Add user</h1>
 	<html:form action="/addUser.do">
 		<table>
@@ -27,6 +28,17 @@
 				</td>
 			</tr>
 			<tr>
+				<td><bean:message key="form.create.user.label.role" />: </td>
+				<td>
+					<html:select property="role" multiple="false" name="userForm">
+						<html:option value="administrator" key="form.create.user.label.role.administrator"/>
+						<html:option value="user" key="form.create.user.label.role.user"/>
+					</html:select>
+					
+					<span style="color: red;"><html:errors property="login" /></span>
+				</td>
+			</tr>
+			<tr>
 				<td>
 					<html:submit>
 			             <bean:message key="form.create.user.label.button.submit" />
@@ -41,5 +53,8 @@
 		</table>
 		<html:hidden property="method" value="addUser" />
 	</html:form>
+<div align="center" style="background:rgba(249,247,237,0.4) ; width: 99.9%;height=1px;border: solid 1px #356AA0; position: absolute; bottom:0;">
+&#169;<strong>ExtEdu Team</strong> 2011-2012
+</div>
 </body>
 </html>

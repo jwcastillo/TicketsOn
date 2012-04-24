@@ -8,5 +8,6 @@
         </id>
         <property column="LOGIN" name="login" unique="true" not-null="true"/>
         <property column="PASSWORD" name="password" not-null="true"/>        
+        <property column="ROLE" name="role" not-null="true"/>       
     </class>
 </hibernate-mapping>

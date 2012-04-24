@@ -5,7 +5,10 @@
 <struts-config>
  
 	<form-beans>
-		 <form-bean name="userForm" type="org.ticketson.view.form.UserForm" />		
+		 <form-bean name="userForm" type="org.ticketson.view.form.UserForm" />	
+		 <form-bean name="userLoginForm" type="org.ticketson.view.form.UserLoginForm" />
+		 <form-bean name="addNewsForm" type="org.ticketson.view.form.AddNewsForm" />	
+		 		
 	</form-beans>
 
 	<global-forwards>
@@ -17,7 +20,7 @@
 	 	<action
 			path="/homePage"
 			type="org.apache.struts.actions.ForwardAction"
-			parameter="/pages/homePage.jsp" />
+			parameter="/index.jsp" />
 			
 		<action
 			path="/addUserPage"
@@ -35,6 +38,59 @@
 			<forward name="error" path="/pages/addUser.jsp" />
 		</action>
 		
+		<action
+			path="/addNews"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="addNewsForm"
+			parameter="method"
+			validate="false">
+ 
+			<forward name="success" path="/showNews.do?method=showNews" />
+			<forward name="error" path="/pages/addNews.jsp" />
+		</action>
+		
+		<action
+			path="/showNews"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="addNewsForm"
+			parameter="method"
+			validate="false">
+ 
+			<forward name="success" path="/pages/showNews.jsp" />
+			<forward name="error" path="/pages/addNews.jsp" />
+		</action>
+		
+		<action
+			path="/showAddNews"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/pages/addNews.jsp" />
+		
+		<action
+			path="/showLoginPage"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/pages/login.jsp" />
+			
+		<action
+			path="/login"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			name="userLoginForm"
+			parameter="method"
+			validate="false"
+			scope="request">
+ 
+			<forward name="success" path="/pages/successLogin.jsp" />
+			<forward name="error" path="/pages/login.jsp" />
+		</action>
+		
+		<action
+			path="/logout"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method"
+			validate="false"
+			scope="request">
+ 
+			<forward name="success" path="/index.jsp" />
+		</action>
 	</action-mappings>
  
 	<message-resources parameter="org.ticketson.properties.Message" />

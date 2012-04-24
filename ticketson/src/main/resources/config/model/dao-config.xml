@@ -9,5 +9,9 @@
  	<bean name="userDao" class="org.ticketson.model.dao.hibernate.UserDaoHibernate">
  		<property name="sessionFactory" ref="sessionFactory" />
  	</bean>
+ 	
+ 	<bean name="newsDao" class="org.ticketson.model.dao.hibernate.NewsDaoHibernate">
+ 		<property name="sessionFactory" ref="sessionFactory"/>
+ 	</bean>
   
 </beans>
